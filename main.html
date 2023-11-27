@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Hospitals</title>
+    <link rel="stylesheet" href="leaflet/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Find Hospitals</h1>
+    <p>Enter your ZIP code to find hospitals near you:</p>
+    <input type="text" id="zip-code" />
+    <button id="search-button" onclick="findHospitals(); scrollToBottom()">Search</button>
+    <div id="map"></div>
+    <div id="hospitals">
+        <h2>Hospitals near you:</h2>
+        <ul id="hospital-list"></ul>
+    </div>
+
+    <!-- Hospital Selection Section -->
+    <div id="hospital-selection" style="display: none;">
+        <h2>Select Hospitals</h2>
+        <div id="selected-hospitals"></div>
+        <button id="compare-button" onclick="compareHospitals(); scrollToBottom()">Compare Hospitals</button>
+    </div>
+    <!-- End of Hospital Selection Section -->
+
+    <!-- Hospital Comparison Section -->
+    <div id="hospital-comparison" style="display: none;">
+        <h2>Hospital Comparison</h2>
+        <h3>Readmission Rates</h3>
+        <div id="readmission-rates" class="bar-graph-container"></div>
+        <h3>Cost Effectiveness</h3>
+    <div id="cost-effectiveness" class="bar-graph-container"></div>
+    <h3>Patient Satisfaction</h3>
+    <div id="patient-satisfaction" class="bar-graph-container"></div>
+        
+        <!-- Button to Scroll to Hospital Comparison Section -->
+        <button id="scroll-button" onclick="scrollToComparison()">Scroll to Hospital Comparison</button>
+    </div>
+    <!-- End of Hospital Comparison Section -->
+
+    <script src="leaflet/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
