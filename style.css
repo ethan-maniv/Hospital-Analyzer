@@ -1,14 +1,24 @@
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: #f4f4f4; /* Light gray background */
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
+header {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 15px 0;
+}
+
 h1 {
-    color: #333;
     font-size: 36px;
+    margin: 0;
+}
+
+main {
+    padding: 20px;
 }
 
 #zip-code {
@@ -16,11 +26,12 @@ h1 {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-right: 10px;
 }
 
 #search-button {
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #28a745;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -28,16 +39,23 @@ h1 {
     border-radius: 5px;
 }
 
-#map {
-    height: 400px;
+#map-section {
     margin: 20px auto;
     border: 1px solid #ccc;
     border-radius: 10px;
 }
 
-#hospitals {
+#map {
+    height: 400px;
+}
+
+#hospitals-section, #hospital-selection, #hospital-comparison {
     text-align: left;
-    margin: 20px auto;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
 }
 
 ul {
@@ -46,16 +64,11 @@ ul {
 }
 
 li {
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
 .bar-graph-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
     padding: 10px;
 }
 
@@ -74,5 +87,4 @@ li {
     text-align: left;
     margin-left: 10px;
     font-weight: bold;
-    color: #333; /* Darken the label text */
 }

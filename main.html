@@ -6,38 +6,48 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Find Hospitals</h1>
-    <p>Enter your ZIP code to find hospitals near you:</p>
-    <input type="text" id="zip-code" />
-    <button id="search-button" onclick="findHospitals(); scrollToBottom()">Search</button>
-    <div id="map"></div>
-    <div id="hospitals">
-        <h2>Hospitals near you:</h2>
-        <ul id="hospital-list"></ul>
-    </div>
+    <header>
+        <h1>Find Hospitals</h1>
+    </header>
 
-    <!-- Hospital Selection Section -->
-    <div id="hospital-selection" style="display: none;">
-        <h2>Select Hospitals</h2>
-        <div id="selected-hospitals"></div>
-        <button id="compare-button" onclick="compareHospitals(); scrollToBottom()">Compare Hospitals</button>
-    </div>
-    <!-- End of Hospital Selection Section -->
+    <main>
+        <section id="search-section">
+            <p>Enter your ZIP code to find hospitals near you:</p>
+            <input type="text" id="zip-code" placeholder="Enter ZIP code" />
+            <button id="search-button" onclick="findHospitals(); scrollToBottom()">Search</button>
+        </section>
 
-    <!-- Hospital Comparison Section -->
-    <div id="hospital-comparison" style="display: none;">
-        <h2>Hospital Comparison</h2>
-        <h3>Readmission Rates</h3>
-        <div id="readmission-rates" class="bar-graph-container"></div>
-        <h3>Cost Effectiveness</h3>
-    <div id="cost-effectiveness" class="bar-graph-container"></div>
-    <h3>Patient Satisfaction</h3>
-    <div id="patient-satisfaction" class="bar-graph-container"></div>
-        
-        <!-- Button to Scroll to Hospital Comparison Section -->
-        <button id="scroll-button" onclick="scrollToComparison()">Scroll to Hospital Comparison</button>
-    </div>
-    <!-- End of Hospital Comparison Section -->
+        <section id="map-section">
+            <div id="map"></div>
+        </section>
+
+        <section id="hospitals-section">
+            <h2>Hospitals near you:</h2>
+            <ul id="hospital-list"></ul>
+        </section>
+
+        <section id="hospital-selection" style="display: none;">
+            <h2>Select Hospitals</h2>
+            <div id="selected-hospitals"></div>
+            <button id="compare-button" onclick="compareHospitals(); scrollToBottom()">Compare Hospitals</button>
+        </section>
+
+        <section id="hospital-comparison" style="display: none;">
+            <h2>Hospital Comparison</h2>
+            <div id="comparison-details">
+                <div id="readmission-rates" class="bar-graph-container">
+                    <h3>Readmission Rates</h3>
+                </div>
+                <div id="cost-effectiveness" class="bar-graph-container">
+                    <h3>Cost Effectiveness</h3>
+                </div>
+                <div id="patient-satisfaction" class="bar-graph-container">
+                    <h3>Patient Satisfaction</h3>
+                </div>
+            </div>
+            <button id="scroll-button" onclick="scrollToComparison()">Scroll to Hospital Comparison</button>
+        </section>
+    </main>
 
     <script src="leaflet/leaflet.js"></script>
     <script src="script.js"></script>

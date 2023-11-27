@@ -1,3 +1,3 @@
 hospital_name,hospital_id,readmission_rate,cost_effectiveness,patient_satisfaction
-Edward Hospital,1,0.180,0.6,0.26
-Rush Copley Medical Center,2,0.12,0.72,0.22
+Edward Hospital,1,0.260,0.6,0.26
+Rush Copley Medical Center,2,0.21,0.72,0.22
